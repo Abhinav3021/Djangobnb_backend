@@ -12,6 +12,10 @@ services:
       - ./.env.dev
     depends_on:
       - db
+    environment:
+      DATABASE: postgres
+      SQL_HOST: db
+      SQL_PORT: 5432
     
   db:
     image: postgres:15
